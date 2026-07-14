@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="ru" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#f7f0e3">
+
+  <title>Улугбек & Муслима · 07.08.2026</title>
+  <meta name="description" content="Приглашаем Вас разделить самый счастливый день нашей жизни ❤️ 18 апреля 2026">
+
+  <!-- ═══ Open Graph (Telegram, VK, Viber) ═══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://ЗАМЕНИТЕ_ДОМЕН.kz">
+  <meta property="og:title"       content="Улугбек & Муслима 💍">
+  <meta property="og:description" content="7 августа 2026 · Вы приглашены на нашу свадьбу ❤️">
+  <meta property="og:image"       content="https://ЗАМЕНИТЕ_ДОМЕН.kz/assets/preview.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="ru_RU">
+
+  <!-- ═══ Twitter / WhatsApp ═══ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Улугбек & Муслима 💍">
+  <meta name="twitter:description" content="7 августа 2026 · Вы приглашены на нашу свадьбу ❤️">
+  <meta name="twitter:image"       content="https://ЗАМЕНИТЕ_ДОМЕН.kz/assets/preview.jpg">
+
+  <!-- ═══ Google Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  RESET & TOKENS                                          ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #f7f0e3;
+    --bg2:      #ede5d0;
+    --pink:     #e8728a;
+    --rose:     #b84060;
+    --pink-lt:  #f8c0ce;
+    --olive:    #6b7a4e;
+    --gold:     #c8963a;
+    --blue:     #7bb3cc;
+    --text:     #3a2c1a;
+    --text2:    #6b4c35;
+    --cream:    #fffdf5;
+    --fhand:    'Caveat', cursive;
+    --fcurl:    'Dancing Script', cursive;
+    --fbody:    'Nunito', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--fbody);
+    color: var(--text);
+    overflow-x: hidden;
+    /* Subtle paper texture via SVG noise */
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+
+  section { position: relative; overflow: hidden; }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  PRELOADER                                               ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #preloader {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--bg);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 18px;
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+  }
+  #preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+
+  .pre-heart {
+    width: 80px; height: 76px;
+    animation: pre-beat 1.3s ease-in-out infinite;
+  }
+  @keyframes pre-beat {
+    0%,100% { transform: scale(1); }
+    14%     { transform: scale(1.22); }
+    28%     { transform: scale(1); }
+    42%     { transform: scale(1.12); }
+  }
+  .pre-names {
+    font-family: var(--fhand);
+    font-size: 2.2rem; color: var(--text2);
+    opacity: 0; animation: fade-up 0.7s ease 0.3s forwards;
+  }
+  .pre-hint {
+    font-family: var(--fbody);
+    font-size: 0.82rem; color: var(--text2); opacity: 0.6;
+    opacity: 0; animation: fade-up 0.7s ease 0.7s forwards;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  MUSIC BUTTON (fixed top-right)                          ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #music-btn {
+    position: fixed; top: 14px; right: 14px; z-index: 1000;
+    width: 54px; height: 54px; border-radius: 50%;
+    background: var(--pink);
+    border: 3px solid rgba(255,255,255,0.65);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 22px rgba(232,114,138,0.5);
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+  }
+  #music-btn .btn-inner {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    transition: transform 0s;
+  }
+  #music-btn.playing .btn-inner { animation: spin 4s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #music-btn svg { width: 22px; height: 22px; fill: white; }
+
+  /* pulse ring */
+  #music-btn::after {
+    content: ''; position: absolute; inset: -5px; border-radius: 50%;
+    border: 2px solid var(--pink);
+    animation: pulse-ring 2.2s ease-out infinite;
+  }
+  #music-btn.playing::after { animation: none; opacity: 0; }
+  @keyframes pulse-ring {
+    0%   { transform: scale(0.85); opacity: 0.9; }
+    70%  { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(0.85); opacity: 0; }
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  LANG TOGGLE (fixed top-left)                            ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #lang-toggle {
+    position: fixed; top: 14px; left: 14px; z-index: 1000;
+    display: flex;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px; padding: 4px; gap: 2px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  }
+  .lbtn {
+    padding: 5px 14px; border: none; border-radius: 50px;
+    font-family: var(--fbody); font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; transition: all 0.25s;
+    background: transparent; color: var(--text2);
+  }
+  .lbtn.on { background: var(--pink); color: white; }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  TICKER BANNER                                           ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  .ticker-wrap { overflow: hidden; white-space: nowrap; padding: 11px 0; }
+  .ticker-wrap.t-olive { background: var(--olive); }
+  .ticker-wrap.t-pink  { background: var(--pink);  }
+  .ticker-inner { display: inline-flex; animation: ticker 22s linear infinite; }
+  .ticker-item {
+    display: inline-block; padding: 0 22px;
+    font-family: var(--fbody); font-size: 0.85rem; font-weight: 700;
+    color: white; letter-spacing: 0.1em;
+  }
+  .ticker-item::after { content: ' ✦ '; }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  PARALLAX DOODLE ELEMENTS                                ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  .pz {
+    position: absolute; pointer-events: none; user-select: none;
+    will-change: transform; line-height: 1; display: block;
+  }
+  .float1 { animation: gf1 4s ease-in-out infinite; }
+  .float2 { animation: gf1 5.5s ease-in-out 1s infinite; }
+  .float3 { animation: gf1 3.8s ease-in-out 2s infinite; }
+  @keyframes gf1 {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50%     { transform: translateY(-12px) rotate(6deg); }
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  REVEAL SYSTEM                                           ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  .rv  { opacity: 0; transform: translateY(38px) scale(0.97); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .rvl { opacity: 0; transform: translateX(-44px);            transition: opacity 0.7s ease, transform 0.7s ease; }
+  .rvr { opacity: 0; transform: translateX(44px);             transition: opacity 0.7s ease, transform 0.7s ease; }
+  .rv.in, .rvl.in, .rvr.in { opacity: 1; transform: none; }
+  .d1 { transition-delay: 0.10s; } .d2 { transition-delay: 0.22s; }
+  .d3 { transition-delay: 0.34s; } .d4 { transition-delay: 0.46s; }
+  .d5 { transition-delay: 0.58s; } .d6 { transition-delay: 0.70s; }
+
+  /* keyframes shared */
+  @keyframes fade-up { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+  @keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    15%     { transform: scale(1.25); }
+    30%     { transform: scale(1); }
+    45%     { transform: scale(1.13); }
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §1 HERO                                                 ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #hero {
+    min-height: 100svh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-start;
+    padding: 88px 20px 60px;
+    background: var(--bg); position: relative;
+  }
+  .hero-sub {
+    font-family: var(--fhand); font-size: 1.55rem;
+    color: var(--text2); text-align: center; margin-bottom: 2px;
+    opacity: 0; animation: fade-up 0.7s ease 1.1s forwards;
+  }
+  .hero-title {
+    font-family: var(--fhand); font-size: clamp(2.6rem,9vw,3.9rem);
+    font-weight: 700; color: var(--pink); text-align: center;
+    line-height: 1.0; margin-bottom: 14px;
+    opacity: 0; animation: fade-up 0.7s ease 1.3s forwards;
+  }
+  .hero-quotes {
+    display: flex; justify-content: space-between; width: 100%;
+    max-width: 380px; margin-bottom: 10px;
+    opacity: 0; animation: fade-up 0.7s ease 1.5s forwards;
+  }
+  .hq {
+    font-family: var(--fhand); font-size: 0.9rem;
+    color: var(--text2); font-style: italic; max-width: 44%; line-height: 1.4;
+  }
+  .hq:first-child { text-align: left; }
+  .hq:last-child  { text-align: right; }
+
+  .hero-photo {
+    width: min(360px, 90vw); position: relative;
+    opacity: 0; animation: fade-up 0.85s ease 1.75s forwards;
+  }
+  .hero-photo img {
+    width: 100%; display: block;
+    filter: drop-shadow(0 10px 28px rgba(0,0,0,0.14));
+  }
+  .hero-photo-placeholder {
+    width: 100%; height: 280px;
+    background: linear-gradient(135deg,#f4aab8,#e8c4a0);
+    border-radius: 14px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+  }
+  .hero-photo-placeholder span { font-size: 5rem; }
+  .hero-photo-placeholder p {
+    font-family: var(--fhand); font-size: 1.1rem; color: rgba(255,255,255,0.9);
+  }
+
+  /* Floating heart doodles on hero */
+  .fh { position: absolute; animation: fheart var(--fd,3.5s) ease-in-out var(--fde,0s) infinite; }
+  @keyframes fheart {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50%     { transform: translateY(-18px) rotate(8deg); }
+  }
+
+  /* Scroll indicator */
+  .scroll-ind {
+    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    opacity: 0; animation: fade-up 0.7s ease 2.6s forwards;
+  }
+  .scroll-ind span {
+    font-family: var(--fbody); font-size: 0.7rem;
+    color: var(--text2); letter-spacing: 0.13em; text-transform: uppercase;
+  }
+  .chevron {
+    width: 18px; height: 18px;
+    border-right: 2px solid var(--pink); border-bottom: 2px solid var(--pink);
+    transform: rotate(45deg);
+    animation: bounce 1.6s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: rotate(45deg) translateY(0); }
+    50%     { transform: rotate(45deg) translateY(7px); }
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §2 INVITATION LETTER                                    ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #invitation {
+    min-height: 70svh; display: flex;
+    align-items: center; justify-content: center;
+    padding: 70px 24px 80px;
+    background: var(--bg2); position: relative;
+  }
+
+  /* The paper card */
+  .paper {
+    position: relative; max-width: 340px; width: 100%;
+    background: white; border-radius: 4px;
+    padding: 48px 32px 38px 34px;
+    box-shadow: 4px 6px 28px rgba(0,0,0,0.12), inset 0 0 0 1px rgba(0,0,0,0.03);
+    /* Lined paper */
+    background-image:
+      repeating-linear-gradient(
+        to bottom, transparent, transparent 31px, #cde6f5 31px, #cde6f5 32px
+      );
+    background-position: 0 54px;
+    /* Paper wobble */
+    animation: paper-sway 8s ease-in-out infinite;
+    transform-origin: top center;
+    transform: rotate(-1.5deg);
+  }
+  @keyframes paper-sway {
+    0%,100% { transform: rotate(-1.5deg); }
+    50%     { transform: rotate(-0.5deg); }
+  }
+  /* Torn top edge */
+  .paper::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 0;
+    box-shadow: 0 -10px 0 10px white;
+    clip-path: polygon(
+      0% 0%,   2% 100%,  4% 0%,   6% 100%,  8% 0%,  10% 100%,
+      12% 0%,  14% 100%, 16% 0%,  18% 100%, 20% 0%,  22% 100%,
+      24% 0%,  26% 100%, 28% 0%,  30% 100%, 32% 0%,  34% 100%,
+      36% 0%,  38% 100%, 40% 0%,  42% 100%, 44% 0%,  46% 100%,
+      48% 0%,  50% 100%, 52% 0%,  54% 100%, 56% 0%,  58% 100%,
+      60% 0%,  62% 100%, 64% 0%,  66% 100%, 68% 0%,  70% 100%,
+      72% 0%,  74% 100%, 76% 0%,  78% 100%, 80% 0%,  82% 100%,
+      84% 0%,  86% 100%, 88% 0%,  90% 100%, 92% 0%,  94% 100%,
+      96% 0%,  98% 100%, 100% 0%
+    );
+  }
+  /* Tape strip */
+  .paper::after {
+    content: '';
+    position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+    width: 90px; height: 28px; border-radius: 3px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(210,190,100,0.38) 0px, rgba(210,190,100,0.38) 5px,
+      rgba(238,215,145,0.38) 5px, rgba(238,215,145,0.38) 10px
+    );
+  }
+  /* Red margin line */
+  .paper-margin {
+    position: absolute; left: 54px; top: 0; bottom: 0;
+    width: 2px; background: rgba(220,75,75,0.28); pointer-events: none;
+  }
+  /* Star sticker */
+  .star-stk {
+    position: absolute; top: -24px; left: -18px;
+    font-size: 3rem; filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.18));
+    transform: rotate(-14deg); pointer-events: none;
+  }
+  /* Bunny doodle */
+  .bunny {
+    position: absolute; top: -16px; right: -6px;
+    font-size: 2.8rem; pointer-events: none;
+  }
+
+  /* Letter text lines — appear one by one */
+  .ll {
+    font-family: var(--fcurl); font-size: 1.28rem; color: #2548a0;
+    line-height: 2.0; display: block;
+    opacity: 0; transform: translateX(-10px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    padding-left: 10px; position: relative; z-index: 2;
+  }
+  .ll.in { opacity: 1; transform: none; }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §3 DATE & CALENDAR                                      ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #date-section {
+    padding: 80px 24px 70px;
+    display: flex; flex-direction: column; align-items: center;
+    background: var(--bg); position: relative;
+  }
+  .date-big {
+    font-family: var(--fhand); font-size: clamp(2.2rem,9vw,4.2rem);
+    font-weight: 700; color: var(--olive);
+    letter-spacing: 0.06em; text-align: center; margin-bottom: 36px;
+  }
+  .dot { color: var(--pink); }
+
+  /* Calendar card */
+  .cal-wrap { position: relative; display: inline-block; }
+  .cal-card {
+    background: white; border-radius: 8px;
+    padding: 22px 26px 28px; width: min(296px,86vw);
+    box-shadow: 5px 7px 30px rgba(0,0,0,0.12);
+    animation: cal-sway 9s ease-in-out infinite;
+    transform: rotate(2deg); transform-origin: top right;
+    position: relative; overflow: visible;
+  }
+  @keyframes cal-sway {
+    0%,100% { transform: rotate(2deg); }
+    50%     { transform: rotate(0.8deg); }
+  }
+  /* Tape on calendar top-right */
+  .cal-card::before {
+    content: '';
+    position: absolute; top: -13px; right: 20px;
+    width: 68px; height: 24px; border-radius: 2px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(210,190,100,0.35) 0px, rgba(210,190,100,0.35) 5px,
+      rgba(238,215,145,0.35) 5px, rgba(238,215,145,0.35) 10px
+    );
+  }
+  .cal-month {
+    font-family: var(--fhand); font-size: 2rem; font-weight: 700;
+    color: var(--pink); text-align: center; margin-bottom: 14px;
+  }
+  .cal-grid {
+    display: grid; grid-template-columns: repeat(7,1fr);
+    gap: 3px; text-align: center;
+  }
+  .cal-hdr { font-size: 0.62rem; font-weight: 700; color: var(--text2); opacity: 0.55; padding: 2px 0; }
+  .cal-day { font-size: 0.88rem; padding: 4px 1px; color: var(--text); border-radius: 50%; }
+  .cal-day.wedding { font-weight: 700; color: var(--pink); position: relative; }
+
+  /* SVG heart that draws around wedding day */
+  .cal-day-heart {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 46px; height: 43px;
+    pointer-events: none; z-index: 5; overflow: visible;
+  }
+  #heart-path {
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    transition: stroke-dashoffset 1.4s ease 0.3s;
+  }
+  #heart-path.draw { stroke-dashoffset: 0; }
+
+  .save-date-txt {
+    font-family: var(--fcurl); font-size: 1.05rem;
+    color: var(--pink); font-style: italic;
+    transform: rotate(-5deg); display: inline-block;
+    float: right; margin-top: 10px;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §4 TIMELINE                                             ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #timeline {
+    padding: 80px 24px 70px;
+    background: var(--bg2); position: relative;
+  }
+  .sec-head {
+    font-family: var(--fhand); font-size: clamp(2rem,7vw,3rem);
+    font-weight: 700; color: var(--olive); text-align: center;
+    letter-spacing: 0.1em; margin-bottom: 52px;
+  }
+  .tl-container { max-width: 380px; margin: 0 auto; position: relative; }
+
+  /* SVG curved connecting line */
+  .tl-svg {
+    position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    width: 100%; height: 100%; pointer-events: none; overflow: visible;
+  }
+  #tl-path {
+    fill: none; stroke: var(--blue); stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 900; stroke-dashoffset: 900;
+    transition: stroke-dashoffset 2.5s ease 0.2s;
+  }
+  #tl-path.draw { stroke-dashoffset: 0; }
+
+  .tl-item {
+    display: flex; align-items: flex-start;
+    margin-bottom: 44px; position: relative;
+  }
+  .tl-item.left  { justify-content: flex-start; padding-right: 52%; }
+  .tl-item.right { justify-content: flex-end;  padding-left:  52%; }
+  .tl-item.right .tl-inner { align-items: flex-end; text-align: right; }
+
+  .tl-inner { display: flex; flex-direction: column; }
+  .tl-time {
+    font-family: var(--fhand); font-size: 2.5rem;
+    font-weight: 700; color: var(--rose); line-height: 1;
+  }
+  .tl-event {
+    font-family: var(--fcurl); font-size: 1.15rem;
+    color: var(--text2); font-style: italic; margin-top: 2px;
+  }
+  .tl-hrt {
+    position: absolute; left: 50%; top: 12px;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    animation: heartbeat 1.6s ease-in-out infinite;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §5 LOCATION                                             ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #location {
+    padding: 80px 24px 70px;
+    background: var(--bg);
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .venue-photo-wrap {
+    width: min(320px,88vw); margin-bottom: 18px; position: relative;
+  }
+  .venue-photo-wrap img {
+    width: 100%; border-radius: 6px; display: block;
+    box-shadow: 5px 7px 30px rgba(0,0,0,0.15);
+    transform: rotate(-1deg);
+  }
+  .venue-photo-placeholder {
+    width: 100%; height: 200px;
+    background: linear-gradient(135deg,#a8c8e0,#7bb3cc);
+    border-radius: 6px; display: flex;
+    align-items: center; justify-content: center; font-size: 3.5rem;
+  }
+  .venue-nm {
+    font-family: var(--fcurl); font-size: 1.35rem;
+    color: var(--blue); font-style: italic;
+    text-align: center; margin-bottom: 24px;
+  }
+  .map-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 34px;
+    background: transparent; border: 2.5px solid var(--olive);
+    border-radius: 50px; color: var(--olive);
+    font-family: var(--fbody); font-size: 0.92rem; font-weight: 700;
+    letter-spacing: 0.08em; text-decoration: none; cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .map-btn:hover, .map-btn:active {
+    background: var(--olive); color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 26px rgba(107,122,78,0.35);
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §6 DRESS CODE                                           ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #dresscode {
+    padding: 80px 24px 70px;
+    background: var(--bg2);
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .palette { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin: 28px 0; }
+  .swatch { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: default; }
+  .swatch-c {
+    width: 58px; height: 58px; border-radius: 50%;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+    transition: transform 0.38s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.38s ease;
+  }
+  .swatch:hover .swatch-c,
+  .swatch:active .swatch-c {
+    transform: scale(1.28) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  }
+  .swatch-n { font-size: 0.72rem; color: var(--text2); text-align: center; }
+  .dc-note {
+    font-family: var(--fhand); font-size: 1.1rem; color: var(--text2);
+    text-align: center; line-height: 1.8; font-style: italic; margin-top: 4px;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §7 COUNTDOWN                                            ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #countdown {
+    padding: 80px 24px 70px;
+    background: var(--bg);
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .cd-label {
+    font-family: var(--fhand); font-size: 1.6rem;
+    color: var(--text2); text-align: center; font-style: italic;
+    margin-bottom: 34px;
+  }
+  .cd-grid {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 12px; width: min(400px,92vw);
+  }
+  .cd-box {
+    background: white; border-radius: 20px;
+    padding: 20px 6px 16px;
+    display: flex; flex-direction: column; align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+    transition: transform 0.3s ease;
+  }
+  .cd-box:hover { transform: translateY(-5px); }
+  .cd-num {
+    font-family: var(--fhand); font-size: clamp(2rem,7.5vw,3.2rem);
+    font-weight: 700; color: var(--pink); line-height: 1;
+  }
+  .cd-unit {
+    font-size: 0.62rem; color: var(--text2); text-transform: uppercase;
+    letter-spacing: 0.12em; margin-top: 6px; font-weight: 700;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §8 RSVP                                                 ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #rsvp {
+    padding: 80px 24px 70px;
+    background: var(--bg2);
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .rsvp-text {
+    font-family: var(--fhand); font-size: 1.2rem;
+    color: var(--text2); text-align: center;
+    max-width: 300px; line-height: 1.75; margin-bottom: 34px;
+  }
+  .rsvp-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 42px;
+    background: linear-gradient(135deg, var(--pink), var(--rose));
+    border: none; border-radius: 50px;
+    color: white; font-family: var(--fbody);
+    font-size: 1rem; font-weight: 700;
+    cursor: pointer; text-decoration: none; letter-spacing: 0.04em;
+    box-shadow: 0 8px 28px rgba(232,114,138,0.5);
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .rsvp-btn:hover, .rsvp-btn:active {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(232,114,138,0.6);
+  }
+  #rsvp-thanks {
+    display: none; margin-top: 30px;
+    padding: 22px 36px; background: white;
+    border-radius: 18px; text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+  }
+  #rsvp-thanks.show { display: block; animation: fade-up 0.6s ease forwards; }
+  #rsvp-thanks p { font-family: var(--fhand); font-size: 1.4rem; color: var(--pink); line-height: 1.7; }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  §9 FINAL SCREEN                                         ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  #final {
+    min-height: 80svh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 70px 24px;
+    background: var(--bg); position: relative;
+  }
+  .final-wait {
+    font-family: var(--fhand); font-size: 2rem;
+    color: var(--text2); text-align: center; margin-bottom: 16px;
+  }
+  .final-groom, .final-bride {
+    font-family: var(--fhand); font-size: clamp(2.8rem,10vw,4.5rem);
+    font-weight: 700; color: var(--pink); text-align: center; line-height: 1.1;
+  }
+  .final-amp {
+    font-family: var(--fcurl); font-size: 2.2rem;
+    color: var(--text2); text-align: center;
+    display: block; margin: 8px 0;
+  }
+  .final-hrt { font-size: 2.2rem; margin-top: 32px; display: inline-block; animation: heartbeat 1.8s ease-in-out infinite; }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  FOOTER                                                  ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  footer {
+    background: var(--olive); color: rgba(255,255,255,0.72);
+    font-family: var(--fbody); font-size: 0.82rem;
+    text-align: center; padding: 22px;
+    letter-spacing: 0.12em;
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  FLYING HEARTS (spawned by JS)                           ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  .flyh {
+    position: fixed; pointer-events: none; z-index: 9;
+    font-size: 1.3rem; animation: fly-heart 4.5s ease-in forwards;
+  }
+  @keyframes fly-heart {
+    0%   { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+    50%  { opacity: 0.8; transform: translateY(-45vh) rotate(20deg) scale(1.3); }
+    100% { opacity: 0; transform: translateY(-95vh) rotate(-15deg) scale(0.4); }
+  }
+
+  /* ╔══════════════════════════════════════════════════════════╗
+     ║  MOBILE / WHATSAPP COMPAT                                ║
+     ╚══════════════════════════════════════════════════════════╝ */
+  @media (max-width: 360px) {
+    .cd-grid { gap: 8px; }
+    .cd-box { padding: 14px 4px 11px; }
+    .cd-num { font-size: 1.8rem; }
+    .tl-time { font-size: 2rem; }
+  }
+  @media (hover: none) {
+    .swatch-c:active { transform: scale(1.22) translateY(-4px); }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ PRELOADER ══════════════════ -->
+<div id="preloader">
+  <svg class="pre-heart" viewBox="0 0 100 90" fill="none">
+    <path d="M50 82 C50 82 6 50 6 26 C6 12 16 3 30 3 C38 3 46 8 50 14 C54 8 62 3 70 3 C84 3 94 12 94 26 C94 50 50 82 50 82Z"
+          fill="#f8c0ce" stroke="#e8728a" stroke-width="3" stroke-linejoin="round"/>
+  </svg>
+  <div class="pre-names" id="pre-names">Улугбек & Муслима</div>
+  <div class="pre-hint" id="pre-hint">Загружаем приглашение…</div>
+</div>
+
+<!-- ══════════════════ FIXED MUSIC BUTTON ══════════════════ -->
+<button id="music-btn" aria-label="Воспроизвести музыку">
+  <div class="btn-inner">
+    <svg id="ic-play"  viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 5l6 4-6 4V8z"/></svg>
+    <svg id="ic-pause" viewBox="0 0 24 24" style="display:none"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zM9 9h2v6H9zm4 0h2v6h-2z"/></svg>
+  </div>
+</button>
+<audio id="bg-audio" loop preload="none">
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ══════════════════ LANG TOGGLE ══════════════════ -->
+<div id="lang-toggle" role="group" aria-label="Язык / Тіл">
+  <button class="lbtn on" id="btn-ru" onclick="setLang('ru')">RU</button>
+  <button class="lbtn"    id="btn-kk" onclick="setLang('kk')">ҚАЗ</button>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     §1 · HERO
+════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Parallax doodles -->
+  <span class="pz float1" data-spd="0.30" style="top:7%;left:5%;font-size:2.4rem">☁️</span>
+  <span class="pz float2" data-spd="0.20" style="top:11%;right:7%;font-size:2rem">☁️</span>
+  <span class="pz float3" data-spd="0.40" style="top:6%;right:26%;font-size:2.5rem">☀️</span>
+  <span class="pz float1" data-spd="0.25" style="top:20%;left:7%;font-size:1.6rem;color:#f5c842">⭐</span>
+  <span class="pz float2" data-spd="0.35" style="top:24%;right:9%;font-size:1.2rem;color:#e8728a">✦</span>
+  <span class="pz float3" data-spd="0.28" style="bottom:26%;left:5%;font-size:1.8rem">🌸</span>
+  <span class="pz float1" data-spd="0.22" style="bottom:20%;right:6%;font-size:2rem">🌼</span>
+  <span class="pz float2" data-spd="0.35" style="bottom:10%;left:8%;font-size:2.2rem">🦋</span>
+  <span class="pz float3" data-spd="0.20" style="bottom:8%;right:7%;font-size:1.5rem">🌿</span>
+  <span class="pz float1" data-spd="0.30" style="top:55%;left:4%;font-size:1.4rem;color:#d4a843">★</span>
+
+  <!-- Floating hearts -->
+  <span class="fh" style="top:42%;left:7%;font-size:1.6rem;--fd:3.5s;--fde:0s">💗</span>
+  <span class="fh" style="top:45%;right:6%;font-size:1.3rem;--fd:4.2s;--fde:0.7s">💕</span>
+  <span class="fh" style="top:58%;left:14%;font-size:1rem;--fd:3.1s;--fde:1.4s;color:#e8728a">♡</span>
+
+  <p class="hero-sub" id="hero-sub">наконец-то</p>
+  <h1 class="hero-title" id="hero-title">МЫ ЖЕНИМСЯ!</h1>
+
+  <div class="hero-quotes">
+    <p class="hq" id="hq1">– интересно, кто будет моим мужем, когда я вырасту</p>
+    <p class="hq" id="hq2">– им буду Я!</p>
+  </div>
+
+  <div class="hero-photo">
+    <img src="assets/couple.png" alt="Улугбек и Муслима в детстве"
+         id="couple-img"
+         onerror="this.style.display='none';document.getElementById('couple-ph').style.display='flex'">
+    <div id="couple-ph" class="hero-photo-placeholder" style="display:none">
+      <span>👫</span>
+      <p>Добавьте фото пары</p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-ind">
+    <span id="scroll-txt">листайте вниз</span>
+    <div class="chevron"></div>
+  </div>
+</section>
+
+<!-- Ticker 1 -->
+<div class="ticker-wrap t-olive" aria-hidden="true">
+  <div class="ticker-inner" id="ticker1"></div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     §2 · INVITATION LETTER
+════════════════════════════════════════════════════════ -->
+<section id="invitation">
+  <span class="pz float1" data-spd="0.22" style="top:7%;left:5%;font-size:2.5rem">⭐</span>
+  <span class="pz float2" data-spd="0.28" style="top:9%;right:7%;font-size:1.7rem">💗</span>
+  <span class="pz float3" data-spd="0.20" style="bottom:8%;left:6%;font-size:2rem">🌷</span>
+  <span class="pz float1" data-spd="0.25" style="bottom:6%;right:6%;font-size:1.7rem">🍃</span>
+  <span class="pz float2" data-spd="0.30" style="top:40%;left:3%;font-size:1.4rem;color:#e8728a">♡</span>
+  <span class="pz float3" data-spd="0.22" style="top:38%;right:4%;font-size:1.2rem;color:#6b7a4e">✿</span>
+
+  <div class="paper rv" role="article" id="paper-card">
+    <div class="paper-margin"></div>
+    <span class="star-stk" aria-hidden="true">⭐</span>
+    <span class="bunny" aria-hidden="true">🐰</span>
+    <div id="letter-body">
+      <span class="ll" data-i="0">Дорогие родные и друзья!</span>
+      <span class="ll" data-i="1">Мы выросли, но радоваться</span>
+      <span class="ll" data-i="2">по-детски так и не разучились.</span>
+      <span class="ll" data-i="3">Приглашаем Вас разделить</span>
+      <span class="ll" data-i="4">с нами этот тёплый,</span>
+      <span class="ll" data-i="5">весёлый вечер.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §3 · DATE & CALENDAR
+════════════════════════════════════════════════════════ -->
+<section id="date-section">
+  <span class="pz float1" data-spd="0.30" style="top:6%;left:5%;font-size:1.7rem;color:#e8728a">✦</span>
+  <span class="pz float2" data-spd="0.20" style="top:8%;right:6%;font-size:1.3rem;color:#d4a843">✦</span>
+  <span class="pz float3" data-spd="0.35" style="top:14%;left:15%;font-size:1.1rem;color:#e8728a">✦</span>
+  <span class="pz float1" data-spd="0.25" style="bottom:9%;right:7%;font-size:2.2rem">🌸</span>
+  <span class="pz float2" data-spd="0.30" style="bottom:7%;left:5%;font-size:1.6rem;color:#d4a843">★</span>
+  <!-- Squiggle doodle -->
+  <svg class="pz" data-spd="0.15" style="top:50%;right:1%;width:46px;opacity:0.22;transform:translateY(-50%)" viewBox="0 0 46 160" fill="none" aria-hidden="true">
+    <path d="M23 5 C38 22, 8 40, 23 58 C38 76, 8 94, 23 112 C38 130, 8 148, 23 155" stroke="#6b7a4e" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  <svg class="pz" data-spd="0.18" style="top:30%;left:1%;width:42px;opacity:0.18;transform:scaleX(-1)" viewBox="0 0 46 160" fill="none" aria-hidden="true">
+    <path d="M23 5 C38 22, 8 40, 23 58 C38 76, 8 94, 23 112 C38 130, 8 148, 23 155" stroke="#e8728a" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+
+  <div class="date-big rv" id="date-display">
+    <span id="d-day">07</span><span class="dot">•</span><span id="d-mon">08</span><span class="dot">•</span><span id="d-yr">2026</span>
+  </div>
+
+  <div class="cal-wrap rv d2">
+    <div class="cal-card" id="cal-card">
+      <div class="cal-month" id="cal-month">АВГУСТА</div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div style="overflow:hidden"><span class="save-date-txt" id="save-txt">Сохраните дату</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §4 · TIMELINE
+════════════════════════════════════════════════════════ -->
+<section id="timeline">
+  <span class="pz float1" data-spd="0.22" style="top:5%;left:5%;font-size:2rem">💗</span>
+  <span class="pz float2" data-spd="0.30" style="top:7%;right:5%;font-size:1.5rem">💗</span>
+  <span class="pz float3" data-spd="0.25" style="bottom:9%;left:5%;font-size:2.2rem">💗</span>
+  <span class="pz float1" data-spd="0.20" style="bottom:7%;right:6%;font-size:1.8rem">💗</span>
+
+  <h2 class="sec-head rv" id="tl-head">ТАЙМИНГ</h2>
+
+  <div class="tl-container">
+    <!-- Animated SVG connecting line -->
+    <svg class="tl-svg" viewBox="0 0 380 500" preserveAspectRatio="none" aria-hidden="true">
+      <path id="tl-path"
+        d="M190 0 C140 70, 240 140, 190 210 C140 280, 240 350, 190 420 C140 490, 240 500, 190 500"/>
+    </svg>
+
+    <div class="tl-item left rv rvl" id="tl-i1">
+      <div class="tl-inner">
+        <span class="tl-time">17:00</span>
+        <span class="tl-event" id="tl1">Сбор гостей</span>
+      </div>
+      <span class="tl-hrt" aria-hidden="true">💗</span>
+    </div>
+
+    <div class="tl-item right rv rvr d2" id="tl-i2">
+      <div class="tl-inner">
+        <span class="tl-time">18:00</span>
+        <span class="tl-event" id="tl2">Начало церемонии</span>
+      </div>
+      <span class="tl-hrt" aria-hidden="true">💗</span>
+    </div>
+
+    <div class="tl-item left rv rvl d3" id="tl-i3">
+      <div class="tl-inner">
+        <span class="tl-time">18:10</span>
+        <span class="tl-event" id="tl3">Рассадка гостей</span>
+      </div>
+      <span class="tl-hrt" aria-hidden="true">💗</span>
+    </div>
+
+    <div class="tl-item right rv rvr d4" id="tl-i4">
+      <div class="tl-inner">
+        <span class="tl-time">18:30</span>
+        <span class="tl-event" id="tl4">Начало вечера</span>
+      </div>
+      <span class="tl-hrt" aria-hidden="true">💗</span>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-size:2.6rem;margin-top:-10px" aria-hidden="true">☀️</div>
+</section>
+
+<!-- Ticker 2 -->
+<div class="ticker-wrap t-pink" aria-hidden="true">
+  <div class="ticker-inner" id="ticker2"></div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     §5 · LOCATION
+════════════════════════════════════════════════════════ -->
+<section id="location">
+  <span class="pz float2" data-spd="0.25" style="top:6%;left:4%;font-size:2rem">💗</span>
+  <span class="pz float3" data-spd="0.30" style="top:8%;right:5%;font-size:1.5rem">💗</span>
+  <span class="pz float1" data-spd="0.22" style="bottom:8%;left:7%;font-size:2.2rem">🌸</span>
+  <span class="pz float2" data-spd="0.28" style="bottom:10%;right:5%;font-size:2rem">🌼</span>
+  <!-- Scribble -->
+  <svg class="pz" data-spd="0.15" style="bottom:14%;left:2%;width:64px;opacity:0.20" viewBox="0 0 64 50" fill="none" aria-hidden="true">
+    <path d="M4 42 C10 10, 22 44, 32 24 C42 4, 52 40, 58 16" stroke="#7bb3cc" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+
+  <h2 class="sec-head rv" id="loc-head">ЛОКАЦИЯ</h2>
+
+  <div class="venue-photo-wrap rv d1">
+    <img src="assets/venue.png" alt="Millennium, Happiness Hall" id="venue-img"
+         onerror="this.style.display='none';document.getElementById('venue-ph').style.display='flex'">
+    <div id="venue-ph" class="venue-photo-placeholder" style="display:none">🏛️</div>
+  </div>
+
+  <p class="venue-nm rv d2" id="venue-name">Банкетный зал Томирис, ул. Кыргауылды, 1а</p>
+
+  <!-- 2GIS button — detects platform -->
+  <a class="map-btn rv d3" id="map-btn" href="#" target="_blank" rel="noopener noreferrer">
+    📍 <span id="map-btn-txt">Построить маршрут</span>
+  </a>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §6 · DRESS CODE
+════════════════════════════════════════════════════════ -->
+<section id="dresscode">
+  <span class="pz float1" data-spd="0.25" style="top:7%;left:5%;font-size:2.2rem">🌸</span>
+  <span class="pz float2" data-spd="0.30" style="top:9%;right:5%;font-size:1.6rem">💐</span>
+  <span class="pz float3" data-spd="0.22" style="bottom:8%;left:7%;font-size:2rem">🎀</span>
+  <span class="pz float1" data-spd="0.28" style="bottom:9%;right:5%;font-size:1.8rem;color:var(--pink)">♡</span>
+
+  <h2 class="sec-head rv" id="dc-head">ДРЕСС-КОД</h2>
+
+  <div class="palette rv d1" role="list" aria-label="Цвета дресс-кода">
+    <div class="swatch" role="listitem">
+      <div class="swatch-c" style="background:#e8c4c4"></div>
+      <span class="swatch-n" id="sw1">Пудровый</span>
+    </div>
+    <div class="swatch" role="listitem">
+      <div class="swatch-c" style="background:#d4b8a0"></div>
+      <span class="swatch-n" id="sw2">Бежевый</span>
+    </div>
+    <div class="swatch" role="listitem">
+      <div class="swatch-c" style="background:#8b9e78"></div>
+      <span class="swatch-n" id="sw3">Оливковый</span>
+    </div>
+    <div class="swatch" role="listitem">
+      <div class="swatch-c" style="background:#c4a8c8"></div>
+      <span class="swatch-n" id="sw4">Лавандовый</span>
+    </div>
+    <div class="swatch" role="listitem">
+      <div class="swatch-c" style="background:#f0d0b0"></div>
+      <span class="swatch-n" id="sw5">Персиковый</span>
+    </div>
+  </div>
+
+  <p class="dc-note rv d3" id="dc-note">Для нас главное —<br>Ваш комфорт и праздничное настроение. 🙏</p>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §7 · COUNTDOWN
+════════════════════════════════════════════════════════ -->
+<section id="countdown">
+  <span class="pz float2" data-spd="0.22" style="top:7%;left:6%;font-size:2.2rem">✨</span>
+  <span class="pz float3" data-spd="0.28" style="top:9%;right:6%;font-size:2rem">⭐</span>
+  <span class="pz float1" data-spd="0.25" style="bottom:9%;left:5%;font-size:1.7rem;color:#d4a843">★</span>
+  <span class="pz float2" data-spd="0.30" style="bottom:7%;right:5%;font-size:2.2rem">✨</span>
+
+  <p class="cd-label rv" id="cd-label">До нашей свадьбы</p>
+
+  <div class="cd-grid rv d1" aria-live="polite" aria-atomic="true">
+    <div class="cd-box">
+      <span class="cd-num" id="cd-d">--</span>
+      <span class="cd-unit" id="cd-du">дней</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-h">--</span>
+      <span class="cd-unit" id="cd-hu">часов</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-m">--</span>
+      <span class="cd-unit" id="cd-mu">минут</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-s">--</span>
+      <span class="cd-unit" id="cd-su">секунд</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §8 · RSVP
+════════════════════════════════════════════════════════ -->
+<section id="rsvp">
+  <span class="pz float1" data-spd="0.25" style="top:8%;left:5%;font-size:2.2rem">💌</span>
+  <span class="pz float2" data-spd="0.30" style="top:10%;right:5%;font-size:2rem;color:var(--pink)">💗</span>
+  <span class="pz float3" data-spd="0.22" style="bottom:8%;left:6%;font-size:2.2rem">🎊</span>
+  <span class="pz float1" data-spd="0.28" style="bottom:9%;right:5%;font-size:2rem">🌸</span>
+
+  <h2 class="sec-head rv" id="rsvp-head">Заполните анкету</h2>
+
+  <p class="rsvp-text rv d1" id="rsvp-txt">
+    Пожалуйста, подтвердите<br>своё присутствие до<br><strong>7 августа 2026</strong> г.
+  </p>
+
+  <!-- ↓ Replace href with your Google Form link ↓ -->
+  <a class="rsvp-btn rv d2" id="rsvp-btn"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf6I6AtENVMBbxVsQemuJ4XCDkMoED7eJYWtPfhd4bVyDYI0g/viewform?usp=header"
+     target="_blank" rel="noopener noreferrer"
+     onclick="schedThanks()">
+    ✉️ <span id="rsvp-btn-txt">Заполнить анкету</span>
+  </a>
+
+  <div id="rsvp-thanks">
+    <p>Спасибо ❤️<br>Мы получили вашу анкету.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     §9 · FINAL SCREEN
+════════════════════════════════════════════════════════ -->
+<section id="final">
+  <span class="pz float3" data-spd="0.30" style="top:8%;left:5%;font-size:2.8rem">💗</span>
+  <span class="pz float1" data-spd="0.22" style="top:9%;right:5%;font-size:2.3rem">💗</span>
+  <span class="pz float2" data-spd="0.35" style="bottom:12%;left:7%;font-size:2rem">🌸</span>
+  <span class="pz float3" data-spd="0.25" style="bottom:9%;right:6%;font-size:2.2rem">🌼</span>
+  <span class="pz float1" data-spd="0.30" style="top:22%;left:9%;font-size:1.6rem">✨</span>
+  <span class="pz float2" data-spd="0.22" style="top:20%;right:9%;font-size:1.4rem">✨</span>
+
+  <p class="final-wait rv" id="final-wait">Ждём вас ❤️</p>
+  <div class="rv d1">
+    <div class="final-groom" id="final-groom">Улугбек</div>
+    <span class="final-amp">&amp;</span>
+    <div class="final-bride" id="final-bride">Муслима</div>
+  </div>
+  <span class="final-hrt rv d3">💗 💗 💗</span>
+</section>
+
+<footer>07 • августа • 2026</footer>
+
+<!-- ════════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════ -->
+<script>
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  CONFIG — edit here                                      ║
+   ╚══════════════════════════════════════════════════════════╝ */
+const CFG = {
+  groomName:   'Улугбек',
+  brideName:   'Муслима',
+  weddingDate: new Date('2026-08-07T18:00:00'), // ← Change date
+  weddingDay:  7,
+  weddingMonth: 7,    // 0-indexed (3 = April)
+  weddingYear: 2026,
+  venueName:   'Банкетный зал Томирис, ул. Кыргауылды, 1а',
+  // 2GIS link — replace with your actual venue
+  twogisLink:  'https://go.2gis.com/Ltr75',
+  // Google Form link — replace with yours
+  formLink:    'https://docs.google.com/forms/d/e/1FAIpQLSf6I6AtENVMBbxVsQemuJ4XCDkMoED7eJYWtPfhd4bVyDYI0g/viewform?usp=header',
+  // Your deployed URL (for OG tags — update in <head> too)
+  siteUrl:     'https://ЗАМЕНИТЕ_ДОМЕН.kz',
+};
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  TRANSLATIONS                                            ║
+   ╚══════════════════════════════════════════════════════════╝ */
+const TR = {
+  ru: {
+    preNames: 'Улугбек & Муслима',
+    preHint:  'Загружаем приглашение…',
+    heroSub:  'наконец-то',
+    heroTitle:'МЫ ЖЕНИМСЯ!',
+    hq1: '– интересно, кто будет моим мужем, когда я вырасту',
+    hq2: '– им буду Я!',
+    scrollTxt:'листайте вниз',
+    ticker1: 'Вы приглашены',
+    ticker2: 'Сохраните дату',
+    letterLines:[
+      'Дорогие родные и друзья!',
+      'Мы выросли, но радоваться',
+      'по-детски так и не разучились.',
+      'Приглашаем Вас разделить',
+      'с нами этот тёплый,',
+      'весёлый вечер.',
+    ],
+    calMonth: 'АВГУСТ',
+    saveTxt:  'Сохраните дату',
+    tlHead:   'ТАЙМИНГ',
+    tl:       ['Сбор гостей','Начало церемонии','Рассадка гостей','Начало вечера'],
+    locHead:  'ЛОКАЦИЯ',
+    mapBtn:   'Построить маршрут',
+    dcHead:   'ДРЕСС-КОД',
+    swatches: ['Пудровый','Бежевый','Оливковый','Лавандовый','Персиковый'],
+    dcNote:   'Просим воздержаться от нарядов<br>белого цвета 🙏',
+    cdLabel:  'До нашей свадьбы',
+    cdUnits:  ['дней','часов','минут','секунд'],
+    rsvpHead: 'Заполните анкету',
+    rsvpTxt:  'Пожалуйста, подтвердите<br>своё присутствие до<br><strong>7 августа 2026</strong> г.',
+    rsvpBtn:  'Заполнить анкету',
+    finalWait:'Ждём вас ❤️',
+  },
+  kk: {
+    /* ══ КАЗАХСКИЙ ПЕРЕВОД — заполните сами ══ */
+    preNames: 'Улугбек & Муслима',
+    preHint:  'Шақыруды жүктеуде…',
+    heroSub:  'ақыры',
+    heroTitle:'БІЗ ҮЙЛЕНЕМІЗ!',
+    hq1: '– мен өскенде күйеуім кім болар екен',
+    hq2: '– ол Мен боламын!',
+    scrollTxt:'төмен жылжытыңыз',
+    ticker1: 'Сіз шақырылдыңыз',
+    ticker2: 'Күнді сақтаңыз',
+    letterLines:[
+      'Қымбатты туыстар мен достар!',
+      'Біз өстік, бірақ балалықтай',
+      'қуануды ұмытқан жоқпыз.',
+      'Бізбен бірге осы жылы,',
+      'көңілді кешті бөлісуге',
+      'шақырамыз.',
+    ],
+    calMonth: 'ТАМЫЗ',
+    saveTxt:  'Күнді сақтаңыз',
+    tlHead:   'БАҒДАРЛАМА',
+    tl:       ['Қонақтарды қарсы алу','Салтанат басталуы','Қонақтарды отырғызу','Кешті ашу'],
+    locHead:  'МЕКЕН-ЖАЙ',
+    mapBtn:   'Бағытты құру',
+    dcHead:   'ДРЕСС-КОД',
+    swatches: ['Пудра','Бежевый','Зәйтүн','Лаванда','Шабдалы'],
+    dcNote:   'Сіздерді асыға <br>күтеміз 🙏',
+    cdLabel:  'Тойымызға дейін',
+    cdUnits:  ['күн','сағат','минут','секунд'],
+    rsvpHead: 'Анкетаны толтырыныз',
+    rsvpTxt:  '<strong>2026 жылдың 7 тамызга</strong> дейін<br>қатысуыңызды растаңыз.',
+    rsvpBtn:  'Анкетаны толтыру',
+    finalWait:'Сізді күтеміз ❤️',
+  },
+};
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  STATE                                                   ║
+   ╚══════════════════════════════════════════════════════════╝ */
+let lang       = 'ru';
+let isPlaying  = false;
+let heartDrawn = false;
+let tlDrawn    = false;
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  PRELOADER                                               ║
+   ╚══════════════════════════════════════════════════════════╝ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const pre = document.getElementById('preloader');
+    pre.classList.add('hide');
+    setTimeout(() => pre && pre.remove(), 1000);
+  }, 2000);
+});
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  MUSIC PLAYER                                            ║
+   ╚══════════════════════════════════════════════════════════╝ */
+const audio    = document.getElementById('bg-audio');
+const musicBtn = document.getElementById('music-btn');
+
+musicBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    audio.pause();
+    musicBtn.classList.remove('playing');
+    document.getElementById('ic-play').style.display  = 'block';
+    document.getElementById('ic-pause').style.display = 'none';
+    musicBtn.setAttribute('aria-label','Воспроизвести музыку');
+  } else {
+    audio.play().catch(() => {});
+    musicBtn.classList.add('playing');
+    document.getElementById('ic-play').style.display  = 'none';
+    document.getElementById('ic-pause').style.display = 'block';
+    musicBtn.setAttribute('aria-label','Пауза');
+    spawnNotes();
+  }
+  isPlaying = !isPlaying;
+});
+
+function spawnNotes() {
+  if (!isPlaying) return;
+  const notes = ['♪','♫','♩','🎵'];
+  const n = document.createElement('span');
+  n.className = 'flyh';
+  n.textContent = notes[Math.floor(Math.random()*notes.length)];
+  const r = musicBtn.getBoundingClientRect();
+  n.style.left = (r.left + Math.random()*30 - 5) + 'px';
+  n.style.top  = (r.bottom - 10) + 'px';
+  document.body.appendChild(n);
+  n.addEventListener('animationend', () => n.remove());
+  setTimeout(spawnNotes, 1400 + Math.random() * 800);
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  BUILD CALENDAR                                          ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function buildCalendar() {
+  const grid = document.getElementById('cal-grid');
+  grid.innerHTML = '';
+
+  // Day headers (Mon-first)
+  ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'].forEach(h => {
+    const el = document.createElement('span');
+    el.className = 'cal-hdr'; el.textContent = h;
+    grid.appendChild(el);
+  });
+
+  const firstJS  = new Date(CFG.weddingYear, CFG.weddingMonth, 1).getDay();
+  const offset   = (firstJS + 6) % 7; // Mon-based
+  const maxDays  = new Date(CFG.weddingYear, CFG.weddingMonth + 1, 0).getDate();
+
+  for (let i = 0; i < offset; i++) grid.appendChild(document.createElement('span'));
+
+  for (let d = 1; d <= maxDays; d++) {
+    const el = document.createElement('span');
+    if (d === CFG.weddingDay) {
+      el.className = 'cal-day wedding';
+      el.id = 'cal-wd';
+      el.innerHTML = d + `
+        <svg class="cal-day-heart" viewBox="0 0 46 43" fill="none" aria-hidden="true">
+          <path id="heart-path"
+            d="M23 39 C23 39 3 25 3 13 C3 6.5 8 2 15 2 C19 2 22 5 23 8 C24 5 27 2 31 2 C38 2 43 6.5 43 13 C43 25 23 39 23 39Z"
+            stroke="#e8728a" stroke-width="3" stroke-linejoin="round"
+            fill="rgba(232,114,138,0.08)"/>
+        </svg>`;
+    } else {
+      el.className = 'cal-day';
+      el.textContent = d;
+    }
+    grid.appendChild(el);
+  }
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  COUNTDOWN TIMER                                         ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function tick() {
+  const diff = CFG.weddingDate - Date.now();
+  if (diff <= 0) {
+    ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i) => {
+      document.getElementById(id).textContent = ['🎉','🎊','💍','❤️'][i];
+    });
+    return;
+  }
+  const s = n => String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('cd-d').textContent = s(diff/86400000);
+  document.getElementById('cd-h').textContent = s((diff%86400000)/3600000);
+  document.getElementById('cd-m').textContent = s((diff%3600000)/60000);
+  document.getElementById('cd-s').textContent = s((diff%60000)/1000);
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  BUILD TICKERS                                           ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function buildTickers() {
+  const t = TR[lang];
+  ['ticker1','ticker2'].forEach((id,i) => {
+    const el = document.getElementById(id);
+    el.innerHTML = '';
+    const txt = i === 0 ? t.ticker1 : t.ticker2;
+    for (let j = 0; j < 16; j++) {
+      const s = document.createElement('span');
+      s.className = 'ticker-item'; s.textContent = txt;
+      el.appendChild(s);
+    }
+  });
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  MAP BUTTON (2GIS)                                       ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function setupMapBtn() {
+  const btn = document.getElementById('map-btn');
+  btn.href = CFG.twogisLink;
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  SCROLL REVEAL                                           ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function setupReveal() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+
+      e.target.classList.add('in');
+
+      // Letter lines staggered
+      if (e.target.id === 'paper-card') animateLetterLines();
+
+      // Calendar heart draw
+      if (e.target.closest('#date-section') && !heartDrawn) {
+        heartDrawn = true;
+        setTimeout(() => {
+          const p = document.getElementById('heart-path');
+          if (p) p.classList.add('draw');
+        }, 500);
+      }
+
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.14 });
+
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(el => io.observe(el));
+
+  // Timeline line
+  const tlIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !tlDrawn) {
+        tlDrawn = true;
+        setTimeout(() => {
+          const p = document.getElementById('tl-path');
+          if (p) p.classList.add('draw');
+        }, 200);
+        tlIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  const tlSec = document.getElementById('timeline');
+  if (tlSec) tlIO.observe(tlSec);
+}
+
+function animateLetterLines() {
+  document.querySelectorAll('.ll').forEach((el, i) => {
+    setTimeout(() => el.classList.add('in'), 200 + i * 190);
+  });
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  PARALLAX                                                ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function setupParallax() {
+  const pzEls = [...document.querySelectorAll('.pz[data-spd]')];
+  let raf = false;
+
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = true;
+    requestAnimationFrame(() => {
+      pzEls.forEach(el => {
+        const sec = el.closest('section');
+        if (!sec) return;
+        const r = sec.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) { raf = false; return; }
+        const spd = parseFloat(el.dataset.spd || 0.25);
+        const mid = r.top + r.height / 2 - window.innerHeight / 2;
+        el.style.transform = `translateY(${mid * spd * -1}px)`;
+      });
+      raf = false;
+    });
+  }, { passive: true });
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  RSVP THANKS                                             ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function schedThanks() {
+  setTimeout(() => {
+    document.getElementById('rsvp-thanks').classList.add('show');
+  }, 1200);
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  LANGUAGE SWITCH                                         ║
+   ╚══════════════════════════════════════════════════════════╝ */
+function setLang(l) {
+  lang = l;
+  document.getElementById('html-root').lang = l;
+  document.getElementById('btn-ru').classList.toggle('on', l==='ru');
+  document.getElementById('btn-kk').classList.toggle('on', l==='kk');
+  const t = TR[l];
+
+  // Preloader
+  const pn = document.getElementById('pre-names');
+  const ph = document.getElementById('pre-hint');
+  if (pn) pn.textContent = t.preNames;
+  if (ph) ph.textContent = t.preHint;
+
+  // Hero
+  document.getElementById('hero-sub').textContent   = t.heroSub;
+  document.getElementById('hero-title').textContent  = t.heroTitle;
+  document.getElementById('hq1').textContent         = t.hq1;
+  document.getElementById('hq2').textContent         = t.hq2;
+  document.getElementById('scroll-txt').textContent  = t.scrollTxt;
+
+  // Letter
+  const lines = document.querySelectorAll('.ll');
+  lines.forEach((el,i) => { if (t.letterLines[i]) el.textContent = t.letterLines[i]; });
+
+  // Date
+  document.getElementById('cal-month').textContent = t.calMonth;
+  document.getElementById('save-txt').textContent  = t.saveTxt;
+
+  // Timeline
+  document.getElementById('tl-head').textContent = t.tlHead;
+  ['tl1','tl2','tl3','tl4'].forEach((id,i) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t.tl[i] || '';
+  });
+
+  // Location
+  document.getElementById('loc-head').textContent    = t.locHead;
+  document.getElementById('map-btn-txt').textContent = t.mapBtn;
+
+  // Dress code
+  document.getElementById('dc-head').textContent = t.dcHead;
+  ['sw1','sw2','sw3','sw4','sw5'].forEach((id,i) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t.swatches[i] || '';
+  });
+  document.getElementById('dc-note').innerHTML = t.dcNote;
+
+  // Countdown
+  document.getElementById('cd-label').textContent = t.cdLabel;
+  ['cd-du','cd-hu','cd-mu','cd-su'].forEach((id,i) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t.cdUnits[i] || '';
+  });
+
+  // RSVP
+  document.getElementById('rsvp-head').textContent    = t.rsvpHead;
+  document.getElementById('rsvp-txt').innerHTML       = t.rsvpTxt;
+  document.getElementById('rsvp-btn-txt').textContent = t.rsvpBtn;
+
+  // Final
+  document.getElementById('final-wait').textContent  = t.finalWait;
+  document.getElementById('final-groom').textContent = CFG.groomName;
+  document.getElementById('final-bride').textContent = CFG.brideName;
+
+  // Tickers
+  buildTickers();
+}
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  INIT                                                    ║
+   ╚══════════════════════════════════════════════════════════╝ */
+document.addEventListener('DOMContentLoaded', () => {
+  buildCalendar();
+  buildTickers();
+  tick();
+  setInterval(tick, 1000);
+  setupReveal();
+  setupParallax();
+  setupMapBtn();
+
+  // Set RSVP link
+  document.getElementById('rsvp-btn').href = CFG.formLink;
+
+  // Set venue name
+  document.getElementById('venue-name').textContent = CFG.venueName;
+
+  // Set names in final
+  document.getElementById('final-groom').textContent = CFG.groomName;
+  document.getElementById('final-bride').textContent = CFG.brideName;
+});
+</script>
+</body>
+</html>
